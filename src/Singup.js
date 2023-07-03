@@ -2,12 +2,15 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 
+import { useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Singup = () => {
 
 
 
     const [objdata, setObj] = useState({ name: '', email: '', password: '', cpassword: '' });
+    const navigate = useNavigate();
 
 
 
@@ -157,9 +160,12 @@ const Singup = () => {
                                         <div className="mt-3">
                                             <p className="mb-0  text-center">
                                                 Already have an account??
-                                                <a href="/login" className="text-primary fw-bold">
+                                                {/* <a href="/login" className="text-primary fw-bold">
                                                     Sign In
-                                                </a>
+                                                </a> */}
+
+                                                <Link to="/login">Register</Link>
+
                                             </p>
                                         </div>
                                     </div>
