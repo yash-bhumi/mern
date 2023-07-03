@@ -37,7 +37,7 @@ const Login = () => {
         try {
 
 
-            const res = await axios.post('/login', objdata);
+            const res = await axios.post('/logintemp', objdata);
 
             if (res.status === 200 || res.status === 201) {
 
