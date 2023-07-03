@@ -92,7 +92,7 @@ const Home = () => {
         fetchData();
 
 
-    }, [])
+    }, [fetchData])
     console.log(PeopleData, "gg");
 
 
